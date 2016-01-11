@@ -1,0 +1,35 @@
+/* ==|====================
+   Partials/Modules/Navigation
+   -------INDEX--------
+   #Container of navigation
+   #Logo
+   #Navigation
+   ======================= */
+
+/* #Container of navigation
+ *-------------------------------------------------------*/
+.container-nav{
+	@include span-columns(3);
+	background-color: $orange;
+  height: 100%;
+  text-align: center;
+}
+
+/* #Logo
+ *-------------------------------------------------------*/
+.content-logo{
+	margin: 50px 0;
+}
+
+/* #Navigation
+ *-------------------------------------------------------*/
+.main-nav{
+
+	a{
+		@include font-size(18);
+		font-family: $title;
+		color:#000;
+		display: block;
+		margin-bottom: 20px;
+	}
+}

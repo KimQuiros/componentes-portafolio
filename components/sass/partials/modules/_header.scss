@@ -1,0 +1,57 @@
+/* ==|====================
+   Partials/Modules/Header
+   -------INDEX--------
+   #Container of header
+   #Header-two
+   ======================= */
+
+/* #Container of header
+ *-------------------------------------------------------*/
+.header {
+  margin-bottom: 100px;
+  width: 100%;
+  height: 600px;
+}
+
+/* #Header-two
+ *-------------------------------------------------------*/
+.header-two{
+  background:$green;
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.dust{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: inline-block;
+}
+
+.content-name-skill {
+  transform: scale(0);
+  filter: blur(10px);
+  animation-name: zoomIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(.3);
+    filter: blur(10px);
+  }
+  40% {
+    transform: scale(1);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1);
+  }
+}

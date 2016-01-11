@@ -1,0 +1,49 @@
+/* ==|====================
+   Partials/Mixins
+   -------INDEX--------
+   #Font-size
+   #Button
+   #Breakpoints
+   ======================= */
+   
+/* #Font-size
+ *-------------------------------------------------------*/
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ($size / 10) + rem;
+}
+
+/* #Button
+ *-------------------------------------------------------
+ *style of the buttons
+ */
+@mixin button($border, $background-color, $color) {
+  @include font-size(14);
+  background-color: $background-color;
+  border: 0;
+  border-radius: 2px;
+  color: $color;
+  font-family: $title;
+  padding: 8px 17px;
+}
+
+/* #Breakpoints
+ *-------------------------------------------------------*/
+@mixin mquery($breakpoint) {
+  $val: map-getter($site-breakpoints, $breakpoint);
+  @if $val == false {
+    @if type-of($breakpoint) == number {
+      @media only screen and ("min-width": $breakpoint) {
+        @content;
+      }
+    }
+    @else {
+      @error "QUERY MIXINS ERROR - INVALID ARGUMENT";
+    }
+  }
+  @else {
+    @media only screen and ("min-width": $val) {
+      @content;
+    }
+  }
+}

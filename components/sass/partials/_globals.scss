@@ -1,0 +1,81 @@
+/* ==|====================
+   Partials/Globals
+   -------INDEX--------
+   #Container
+   #Tags
+   #Max-content
+   #Bourbon Neat
+   ======================= */
+
+/* #Container
+ *-------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	list-style: none;
+}
+
+/* #Tags
+ *-------------------------------------------------------
+ * p, a, h1 al h5
+ */
+p{
+	@include font-size(14);
+	
+	margin:0;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1{
+	@include font-size(35);
+}
+
+h2,
+h3,
+h4,
+h5 {
+	
+}
+
+h3{
+	@include font-size(40);
+}
+
+h4{
+	@include font-size(30);
+	margin-bottom: 20px;
+}
+
+h5{
+	@include font-size(18);
+}
+
+/* #Max-content
+ *-------------------------------------------------------*/
+.max-width-content{
+	max-width: $max-content;
+	margin: 0 auto;
+}
+
+.section{
+	margin-bottom: 100px;
+	padding-top: 100px;
+	border-top: 1px solid #cecece;
+}

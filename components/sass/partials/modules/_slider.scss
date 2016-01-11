@@ -1,0 +1,147 @@
+/* ==|====================
+   Partials/Modules/Slider
+   -------INDEX--------
+   #Container of slider
+   ======================= */
+
+/* #Container of slider
+ *-------------------------------------------------------*/
+.content-slider {
+  @include span-columns(9);
+  @include omega();
+}
+
+.slider {
+  height: 400px;
+  margin-top: 45px;
+  overflow: hidden;
+  position: relative;
+
+    @media( min-width: 560px){
+        height: 300px;
+    }
+
+    @media( min-width: 1000px){
+        height: 530px;
+    }
+}
+.slides{
+    position:relative;
+}
+.slides .slide {
+    display: none;
+    list-style-type: none;
+    width:100%;
+    height: 300px;
+  @media( min-width: 1000px){
+        height: 530px;
+    }
+}
+.active{
+    display: block !important;
+
+    -webkit-animation-duration:2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.slide img{
+    width: 100%;
+    height: 300px;
+
+    @media (min-width: 1000px){
+      height: inherit;
+      width: inherit;
+    }
+}
+.slider-controls {
+  margin-top: 0;
+  text-align: center;
+  position:absolute;
+  bottom: 20px;
+  left: 20%;
+  top: 80%;
+  @media(min-width: 560px){
+    top: 89%;
+    left: 38%;
+  }
+  @media(min-width: 1025px){
+    left: 44%;
+  }
+}
+
+.slider-controls li {
+    cursor: pointer;
+    display: inline-block;
+    background: #000;
+    text-indent: -99999px;
+    height: 25px;
+    width: 25px;
+    margin: 0 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    @media(min-width: 560px){
+      height: 12px;
+      width: 12px;
+    }
+}
+
+.active-control {
+    background: #000 !important;
+}
+.btn-control{
+    display: block;
+    position:absolute;
+    top:40%;
+    border: 1px solid #fff;
+    background: #000;
+    color: #fff;
+    padding: 20px 15px;
+    font-size: 40px;
+    font-weight: lighter;
+    
+    display: none;
+
+}
+.btn-next{
+    right: 1px;
+}
+.btn-prev{
+    left:1px;
+}
+@media (min-width:960px){
+    .btn-control:hover{
+        background:#fff;
+        color: #000;
+        border: 1px solid #000;
+
+    }
+    .slider:hover .btn-control{
+        display: block;
+    }
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

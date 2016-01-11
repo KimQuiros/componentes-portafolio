@@ -1,0 +1,25 @@
+/* ==|====================
+   Partials
+   -------INDEX--------
+   #Partials
+   #Bourbon Neat
+   #Modules
+   ======================= */
+
+/* #Bourbon Neat
+ *-------------------------------------------------------*/
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+/* #Partials
+ *-------------------------------------------------------*/
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/globals";
+
+/* #Modules
+ *-------------------------------------------------------*/
+@import "partials/modules/navigation";
+@import "partials/modules/header";
+@import "partials/modules/slider";

@@ -1,0 +1,35 @@
+/* ==|====================
+   Partials/Variables
+   -------INDEX--------
+   #Tipography
+   #Colors
+   #Max-content
+   #Breakpoints
+   ======================= */
+
+/* #Typography
+ *-------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Arimo);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+$body: 'Arimo', sans-serif;
+$title: 'Josefin Slab', serif;
+
+/* #Colors
+ *-------------------------------------------------------*/
+$green:#83AF9B;
+$pink:#FC9D9A;
+$orange:#F9CDAD;
+  
+/* #Max-content
+ *-------------------------------------------------------*/
+$max-content:1200px;
+
+/* #Breakpoints
+ *-------------------------------------------------------*/
+$site-breakpoints: (
+  "base": "20em", //320px
+  "small": "37.5em", //600px
+  "medium": "56.25em", //900px
+  "large": "68.75em", //1100px
+  "x-large": "87.5em", //1400px
+);

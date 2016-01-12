@@ -9,6 +9,7 @@
  *-------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Arimo);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+@import url(https://fonts.googleapis.com/css?family=Grand+Hotel);
 html {
   box-sizing: border-box; }
 
@@ -278,8 +279,9 @@ a {
   text-decoration: none; }
 
 h1 {
-  font-size: 35px;
-  font-size: 3.5rem; }
+  font-size: 45px;
+  font-size: 4.5rem;
+  font-family: "Grand Hotel", cursive; }
 
 h3 {
   font-size: 40px;
@@ -294,6 +296,9 @@ h5 {
   font-size: 18px;
   font-size: 1.8rem; }
 
+canvas {
+  height: inherit; }
+
 /* #Max-content
  *-------------------------------------------------------*/
 .max-width-content {
@@ -302,7 +307,7 @@ h5 {
 
 .section {
   margin-bottom: 100px;
-  padding-top: 100px;
+  margin-top: 100px;
   border-top: 1px solid #cecece; }
 
 /* #Modules
@@ -313,6 +318,8 @@ h5 {
    #Container of navigation
    #Logo
    #Navigation
+
+   #Nav 2
    ======================= */
 /* #Container of navigation
  *-------------------------------------------------------*/
@@ -320,7 +327,7 @@ h5 {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
-  width: 23.2317613015%;
+  width: 14.7019570017%;
   background-color: #F9CDAD;
   height: 100%;
   text-align: center; }
@@ -342,6 +349,25 @@ h5 {
   display: block;
   margin-bottom: 20px; }
 
+/* #Nav 2
+ *-------------------------------------------------------*/
+.content-navigation {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #83AF9B; }
+
+.container-logo {
+  float: left; }
+
+.nav {
+  float: right; }
+  .nav a {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: "Josefin Slab", serif;
+    color: #fff;
+    margin-right: 20px; }
+
 /* ==|====================
    Partials/Modules/Header
    -------INDEX--------
@@ -358,18 +384,21 @@ h5 {
 /* #Header-two
  *-------------------------------------------------------*/
 .header-two {
-  background: #83AF9B;
   position: relative;
   height: 600px;
   width: 100%; }
 
-.dust {
+.circle {
+  background-position: fixed;
   position: absolute;
-  width: 100%;
-  top: 0;
-  display: inline-block; }
+  width: inherit;
+  height: inherit;
+  top: 0; }
 
 .content-name-skill {
+  position: absolute;
+  top: 145px;
+  text-align: center;
   transform: scale(0);
   filter: blur(10px);
   animation-name: zoomIn;
@@ -379,7 +408,29 @@ h5 {
   animation-direction: alternate;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-play-state: running; }
+  animation-play-state: running;
+  width: 100%; }
+  .content-name-skill h1 {
+    margin-top: 50px;
+    opacity: 1;
+    position: relative;
+    color: #FC9D9A;
+    font-weight: 400;
+    margin-right: 10px;
+    padding: 30px 0;
+    display: inline-block;
+    border-top: 3px solid #FC9D9A;
+    border-bottom: 3px solid #FC9D9A;
+    letter-spacing: 10px; }
+  .content-name-skill p {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: "Josefin Slab", serif;
+    text-transform: uppercase;
+    color: #FC9D9A;
+    margin-top: 14px;
+    letter-spaceing: 5px;
+    line-height: 1.2em; }
 
 @keyframes zoomIn {
   0% {
@@ -402,7 +453,7 @@ h5 {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
-  width: 74.4105871005%;
+  width: 82.9403914003%;
   margin-right: 0; }
   .content-slider:last-child {
     margin-right: 0; }

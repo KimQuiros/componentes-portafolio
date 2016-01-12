@@ -4,12 +4,14 @@
    #Container of navigation
    #Logo
    #Navigation
+
+   #Nav 2
    ======================= */
 
 /* #Container of navigation
  *-------------------------------------------------------*/
 .container-nav{
-	@include span-columns(3);
+	@include span-columns(2);
 	background-color: $orange;
   height: 100%;
   text-align: center;
@@ -33,3 +35,26 @@
 		margin-bottom: 20px;
 	}
 }
+
+/* #Nav 2
+ *-------------------------------------------------------*/
+.content-navigation {
+	width: 100%;
+	padding: 30px 0;
+	background-color: $green; 
+}
+
+ .container-logo {
+ 	float: left;
+ }
+
+ .nav {
+	float: right;
+
+	a{
+		@include font-size(18);
+		font-family: $title;
+		color: #fff;
+		margin-right: 20px;
+	}
+ }

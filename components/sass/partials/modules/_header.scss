@@ -16,20 +16,23 @@
 /* #Header-two
  *-------------------------------------------------------*/
 .header-two{
-  background:$green;
   position: relative;
   height: 600px;
   width: 100%;
 }
 
-.dust{
+.circle{
+  background-position: fixed;
   position: absolute;
-  width: 100%;
+  width: inherit;
+  height: inherit;
   top: 0;
-  display: inline-block;
 }
 
 .content-name-skill {
+  position: absolute;
+  top: 145px;
+  text-align: center;
   transform: scale(0);
   filter: blur(10px);
   animation-name: zoomIn;
@@ -40,6 +43,31 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: running;
+  width: 100%;
+
+  h1{
+    margin-top: 50px;
+    opacity: 1;
+    position: relative;
+    color: $pink;
+    font-weight: 400;
+    margin-right: 10px;
+    padding: 30px 0;
+    display: inline-block;
+    border-top: 3px solid $pink;
+    border-bottom: 3px solid $pink;
+    letter-spacing: 10px;
+  }
+
+  p{
+    @include font-size(18);
+    font-family: $title;
+    text-transform: uppercase;
+    color: $pink;
+    margin-top: 14px;
+    letter-spaceing: 5px;
+    line-height:1.2em;
+  }
 }
 
 @keyframes zoomIn {

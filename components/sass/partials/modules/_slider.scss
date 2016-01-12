@@ -7,7 +7,7 @@
 /* #Container of slider
  *-------------------------------------------------------*/
 .content-slider {
-  @include span-columns(9);
+  @include span-columns(10);
   @include omega();
 }
 

@@ -143,7 +143,7 @@ function sliderFunctions(){
  * particles.js config
  */
 
-particlesJS("dust", {
+particlesJS("circle", {
   "particles": {
     "number": {
       "value": 1000,
@@ -153,7 +153,7 @@ particlesJS("dust", {
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#83AF9B"
     },
     "shape": {
       "type": "circle",
@@ -168,7 +168,7 @@ particlesJS("dust", {
       }
     },
     "opacity": {
-      "value": 0.4,
+      "value": 0.5,
       "random": true,
       "anim": {
         "enable": true,
@@ -178,7 +178,7 @@ particlesJS("dust", {
       }
     },
     "size": {
-      "value": 3,
+      "value": 4,
       "random": true,
       "anim": {
         "enable": true,

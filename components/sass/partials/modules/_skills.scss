@@ -1,0 +1,22 @@
+/* ==|====================
+   Partials/Modules/Skills
+   -------INDEX--------
+   #Container of header
+   #Header-two
+   ======================= */
+
+/* #Container of header
+ *-------------------------------------------------------*/
+.chart {
+  position: relative;
+  display: inline-block;
+  margin: 20px 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

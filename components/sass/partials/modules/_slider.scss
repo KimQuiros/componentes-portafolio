@@ -9,6 +9,7 @@
 .content-slider {
   @include span-columns(10);
   @include omega();
+  float: right !important;
 }
 
 .slider {

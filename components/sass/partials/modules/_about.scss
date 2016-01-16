@@ -1,0 +1,21 @@
+/* ==|====================
+   Partials/Modules/about
+   -------INDEX--------
+   #Container of about
+   #text
+   ======================= */
+
+/* #Container of about
+ *-------------------------------------------------------*/
+.content-title{
+	text-align: center;
+}
+
+.title{
+	color: $pink;
+}
+
+.line{
+	@include font-size(50);
+	color: $pink;
+}

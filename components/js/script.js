@@ -3,6 +3,7 @@
    -------INDEX--------
    #Slider
    #Canvas
+   #Skills
    ======================= */
 
 /* #Slider
@@ -218,4 +219,18 @@ particlesJS("circle", {
     }
   },
   "retina_detect": true
+});
+
+/* #Skills
+ *-------------------------------------------------------*/
+$(function() {
+  $('.chart').easyPieChart({
+    scaleColor: "#ecf0f1",
+    lineWidth: 20,
+    lineCap: 'butt',
+    barColor: '#FC9D9A',
+    trackColor: "#ecf0f1",
+    size: 160,
+    animate: 500
+  });
 });

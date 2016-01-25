@@ -31,16 +31,16 @@ module.exports = function(grunt) {
             }
         }, /* uglify */
 
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'components/img/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: 'img/'
-                }]
-            }
-        }, /* imagemin */
+        // imagemin: {
+        //     dynamic: {
+        //         files: [{
+        //             expand: true,
+        //             cwd: 'components/img/',
+        //             src: ['**/*.{png,jpg,gif}'],
+        //             dest: 'img/'
+        //         }]
+        //     }
+        // }, /* imagemin */
 
 
         /*======== watch ========*/
@@ -66,11 +66,11 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    // grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('dev', ['sass', 'uglify', 'imagemin', 'browserSync', 'watch']);
+    grunt.registerTask('dev', ['sass', 'uglify', 'browserSync', 'watch']);
 }

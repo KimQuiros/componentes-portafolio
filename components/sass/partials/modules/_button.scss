@@ -1,15 +1,12 @@
 /* ==|====================
-   Partials/Modules/Icons
+   Partials/Modules/Button
    -------INDEX--------
-   #Icons Nav
+   #Button Blog
    ======================= */
 
-/* #Icons Nav
+/* #Button Blog
  *-------------------------------------------------------*/
-.content-rrss{
-	width: 100%;
-	img{
-		margin:42px 3px;
-		width: 10%;
-	}
+.btn-blog {
+	@include button($green, $green, $white);
+	margin-top: 20px;
 }

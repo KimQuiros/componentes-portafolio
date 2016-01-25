@@ -338,8 +338,8 @@ canvas {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
-  width: 14.7019570017%;
-  border-right: 1px solid #FC9D9A;
+  width: 23.2317613015%;
+  background: #FC9D9A;
   height: 100%;
   text-align: center; }
   .container-nav:last-child {
@@ -361,7 +361,7 @@ canvas {
   animation-play-state: running; }
   .content-logo h1 {
     opacity: 1;
-    color: #FC9D9A;
+    color: #fff;
     font-weight: 400;
     display: inline-block;
     letter-spacing: 10px; }
@@ -382,11 +382,9 @@ canvas {
   font-size: 18px;
   font-size: 1.8rem;
   font-family: "Josefin Slab", serif;
-  color: #000;
+  color: #fff;
   display: block;
   margin-bottom: 20px; }
-  .main-nav a:hover {
-    color: #FC9D9A; }
 
 /* #Nav 2
  *-------------------------------------------------------*/
@@ -488,128 +486,134 @@ canvas {
    ======================= */
 /* #Container of slider
  *-------------------------------------------------------*/
-.content-slider {
+.slider {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
-  width: 82.9403914003%;
+  width: 74.4105871005%;
   margin-right: 0;
-  float: right !important; }
-  .content-slider:last-child {
+  height: 400px;
+  float: right;
+  margin-top: 88px;
+  position: relative;
+  overflow: hidden;
+  background: #666; }
+  .slider:last-child {
     margin-right: 0; }
 
-.slider {
-  height: 400px;
-  margin-top: 45px;
-  overflow: hidden;
-  position: relative; }
-  @media (min-width: 560px) {
-    .slider {
-      height: 300px; } }
-  @media (min-width: 1000px) {
-    .slider {
-      height: 530px; } }
-
-.slides {
+#slider-wrapper {
+  width: 99999px;
+  height: 100%;
   position: relative; }
 
-.slides .slide {
-  display: none;
-  list-style-type: none;
-  width: 100%;
-  height: 300px; }
-  @media (min-width: 1000px) {
-    .slides .slide {
-      height: 530px; } }
+#slider-wrapper #slide {
+  height: 100%;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  position: relative; }
 
-.active {
-  display: block !important;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn; }
-
-.slide img {
-  width: 100%;
-  height: 300px; }
-  @media (min-width: 1000px) {
-    .slide img {
-      height: inherit;
-      width: inherit; } }
-
-.slider-controls {
-  margin-top: 0;
-  text-align: center;
-  position: absolute;
-  bottom: 20px;
-  left: 20%;
-  top: 80%; }
-  @media (min-width: 560px) {
-    .slider-controls {
-      top: 89%;
-      left: 38%; } }
-  @media (min-width: 1025px) {
-    .slider-controls {
-      left: 44%; } }
-
-.slider-controls li {
-  cursor: pointer;
-  display: inline-block;
-  background: #000;
-  text-indent: -99999px;
-  height: 25px;
-  width: 25px;
-  margin: 0 6px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%; }
-  @media (min-width: 560px) {
-    .slider-controls li {
-      height: 12px;
-      width: 12px; } }
-
-.active-control {
-  background: #000 !important; }
-
-.btn-control {
+#slider-wrapper .slide-image {
   display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0; }
+
+#slider-loader {
   position: absolute;
-  top: 40%;
-  border: 1px solid #fff;
-  background: #000;
-  color: #fff;
-  padding: 20px 15px;
-  font-size: 40px;
-  font-weight: lighter;
-  display: none; }
+  width: 12px;
+  height: 12px;
+  top: 95%;
+  left: 50%;
+  border-radius: 12px;
+  animation: loader10m 3s ease-in-out infinite;
+  margin: -6px 0 0 -6px; }
 
-.btn-next {
-  right: 1px; }
+#slider-loader:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  animation: loader10g 3s ease-in-out infinite; }
 
-.btn-prev {
-  left: 1px; }
+#slider-loader:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  animation: loader10d 3s ease-in-out infinite; }
 
-@media (min-width: 960px) {
-  .btn-control:hover {
-    background: #fff;
-    color: #000;
-    border: 1px solid #000; }
-  .slider:hover .btn-control {
-    display: block; } }
-
-@-webkit-keyframes fadeIn {
+@keyframes loader10g {
   0% {
-    opacity: 0; }
+    background-color: rgba(255, 255, 255, 0.2); }
+  25% {
+    background-color: white; }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2); }
+  75% {
+    background-color: rgba(255, 255, 255, 0.2); }
   100% {
-    opacity: 1; } }
+    background-color: rgba(255, 255, 255, 0.2); } }
 
-@keyframes fadeIn {
+@keyframes loader10m {
   0% {
-    opacity: 0; }
+    background-color: rgba(255, 255, 255, 0.2); }
+  25% {
+    background-color: rgba(255, 255, 255, 0.2); }
+  50% {
+    background-color: white; }
+  75% {
+    background-color: rgba(255, 255, 255, 0.2); }
   100% {
-    opacity: 1; } }
+    background-color: rgba(255, 255, 255, 0.2); } }
+
+@keyframes loader10d {
+  0% {
+    background-color: rgba(255, 255, 255, 0.2); }
+  25% {
+    background-color: rgba(255, 255, 255, 0.2); }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2); }
+  75% {
+    background-color: white; }
+  100% {
+    background-color: rgba(255, 255, 255, 0.2); } }
+
+#slider-loader-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background: #dc0000; }
+
+#slider-previous,
+#slider-next {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  text-indent: -99999em;
+  z-index: 1000;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41203/slider-nav-sprite.png);
+  top: 50%;
+  margin-top: -32px; }
+
+#slider-previous {
+  left: 1em; }
+
+#slider-next {
+  right: 1em;
+  background-position: 100% 0; }
 
 /* ==|====================
    Partials/Modules/about
@@ -637,8 +641,11 @@ canvas {
    ======================= */
 /* #Icons Nav
  *-------------------------------------------------------*/
-.content-rrss img {
-  margin: 0 2px; }
+.content-rrss {
+  width: 100%; }
+  .content-rrss img {
+    margin: 42px 3px;
+    width: 10%; }
 
 /* ==|====================
    Partials/Modules/Skills
@@ -648,16 +655,95 @@ canvas {
    ======================= */
 /* #Container of header
  *-------------------------------------------------------*/
-.chart {
-  position: relative;
+.skills {
+  width: 100%;
+  transform: skew(0deg, -2deg); }
+
+.container-skills {
+  text-align: center;
+  z-index: 1;
+  transform: skew(0deg, 2deg); }
+
+.content-chart {
   display: inline-block;
+  margin-top: 35px;
+  font-family: "Josefin Slab", serif;
+  width: 13%;
+  vertical-align: top; }
+
+.chart {
+  font-size: 25px;
+  font-size: 2.5rem;
+  position: relative;
   margin: 20px 10px;
-  font-size: 14px;
-  text-align: center; }
+  color: #fff;
+  z-index: 1; }
+
+.chart-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #fff;
+  position: relative; }
 
 .chart canvas {
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  text-align: center; }
+
+.opacity-background {
+  background: url(../img/roses.jpg) fixed;
+  height: 300px;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 0; }
+  .opacity-background:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: inherit; }
+
+/* ==|====================
+   Partials/Modules/Blog
+   -------INDEX--------
+   #Container of Blog
+   ======================= */
+/* #Container of Blog home
+ *-------------------------------------------------------*/
+.blog {
+  position: relative;
+  width: 100%;
+  transform: skew(0deg, -2deg); }
+
+.content-text-blog {
+  position: absolute;
+  margin-top: 118px;
+  text-align: center;
+  width: 94%;
+  transform: skew(0deg, 2deg); }
+  .content-text-blog p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #fff;
+    font-family: "Arimo", sans-serif; }
+
+/* ==|====================
+   Partials/Modules/Button
+   -------INDEX--------
+   #Button Blog
+   ======================= */
+/* #Button Blog
+ *-------------------------------------------------------*/
+.btn-blog {
+  font-size: 16px;
+  font-size: 1.6rem;
+  background-color: #83AF9B;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-family: "Josefin Slab", serif;
+  padding: 11px 39px;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=style.min.css.map */

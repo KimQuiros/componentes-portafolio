@@ -24,23 +24,28 @@
 				</nav><!-- main-nav -->
 				<div class="content-rrss">
 					<img src="img/facebook.png" alt="">
-					<img src="img/facebook.png" alt="">
-					<img src="img/facebook.png" alt="">
+					<img src="img/pinterest.png" alt="">
 				</div><!-- content-rrss -->
 			</div><!-- container-nav -->
 			<div class="max-width-content">
-				<div class="content-slider">
-					<div class="slider" id="slider">
-		        <ul class="slides">
-		          <li class="active slide slide0 "><img src="img/work1.jpg"></li>
-		          <li class="slide slide1"><img src="img/work2.jpg"></li>
-		          <li class="slide slide2 "><img src="img/work3.jpg"></li>
-		        </ul>
-		       	<ul id="slider-controls" class="slider-controls"></ul>
-		        <button id="prev" class="btn-control btn-prev"><</button>
-		       	<button id="next" class="btn-control btn-next">></button>
-					</div><!-- slider -->
-	    	</div><!--content-slider-->
+				<div class="slider">
+	<ul id="slider-wrapper" class="slider-wrapper">
+		<li id="slide" class="slide">
+			<img src="img/work1.jpg" alt="" class="slide-image" />
+		</li>
+		<li class="slide">
+			<img src="img/work2.jpg" alt="" class="slide-image" />
+		</li>
+				<li class="slide">
+			<img src="img/work3.jpg" alt="" class="slide-image" />
+		</li>
+	</ul>
+	<a href="" class="slider-previous" id="slider-previous">Previous</a>
+	<a href="" class="slider-next" id="slider-next">Next</a>
+
+	<div id="slider-loader" class="slider-loader"></div>
+	<div id="slider-loader-bar" class="slider-loader-bar"></div>
+</div>
 			</div><!-- max-content -->
 		</header><!-- header -->
 		
@@ -82,20 +87,88 @@
 			<div class="opacity-background">
 				<div class="max-width-content">
 					<div class="container-skills">
-						<p class="chart" data-percent="80">Illustrator</p>
-  					<p class="chart" data-percent="40">Photoshop</p>
-  					<p class="chart" data-percent="20">Indesign</p>
-  					<p class="chart" data-percent="75">oral y escrita</p>
-  					<p class="chart" data-percent="30">Ingles</p>
+						<div class="content-chart">
+							<p class="chart" data-percent="80">80%</p>
+							<p class="chart-title">Illustrator</p>
+						</div><!-- content-chart -->
+						<div class="content-chart">
+							<p class="chart" data-percent="40">40%</p>
+	  					<p class="chart-title">Photoshop</p>
+						</div><!-- content-chart -->
+  					<div class="content-chart">
+	  					<p class="chart" data-percent="20">20%</p>
+	  					<p class="chart-title">Indesign</p>
+  					</div><!-- content-chart -->
+  					<div class="content-chart">
+	  					<p class="chart" data-percent="75">75%</p>
+	  					<p class="chart-title">Comunicacion oral y escrita</p><!-- content-chart -->
+  					</div>
+  					<div class="content-chart">
+	  					<p class="chart" data-percent="30">30%</p>
+	  					<p class="chart-title">Ingles</p>
+  					</div><!-- content-chart -->
 					</div><!--container-skills-->
 				</div><!-- max-width-content -->
 			</div><!-- opacity-background -->
 		</section><!-- skills -->
+
+		<section class="works">
+			<div class="max-width-content">
+				<div class="container-works">
+					<div class="content-title">
+					<h2 class="title">Portafolio</h2>
+					<span class="line">-</span>
+				</div><!-- content-text -->
+					<div class="content-work">
+						<div class="content-work-img">
+							<img src="" alt="">
+						</div><!-- content-work-img -->
+						<div class="content-work-text">
+							<h3 class="content-title">Nombre del Trabajo</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div><!-- content-work-text -->
+					</div><!-- content-work -->
+					<div class="content-work">
+						<div class="content-work-img">
+							<img src="" alt="">
+						</div><!-- content-work-img -->
+						<div class="content-work-text">
+							<h3 class="content-title">Nombre del Trabajo</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div><!-- content-work-text -->
+					</div><!-- content-work -->
+					<div class="content-work">
+						<div class="content-work-img">
+							<img src="" alt="">
+						</div><!-- content-work-img -->
+						<div class="content-work-text">
+							<h3 class="content-title">Nombre del Trabajo</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div><!-- content-work-text -->
+					</div><!-- content-work -->
+				</div><!-- container-works -->
+			</div><!-- max-width-content -->
+		</section><!-- works -->
+
+		<section class="blog">
+			<div class="opacity-background">
+				<div class="max-width-content">
+					<div class="content-text-blog">
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus in lorem a imperdiet."</p>
+						<button class="btn-blog">Ir al Blog</button>
+					</div><!-- content-text-blog -->
+				</div> <!-- max-width-content -->
+			</div><!-- background-blog -->
+		</section> <!-- blog -->
 		<!-- http://codepen.io/anon/pen/KVqXGZ -->
 		<script type="text/javascript" src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
 		<script type="text/javascript" src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+		<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41203/jquery.transit.min.js"></script>
+		<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41203/imagesloaded.min.js"></script>
 		<script type="text/javascript" src="js/script.min.js"></script>
 	</body>
 </html>
+
+<!-- http://codepen.io/thebabydino/pen/jPJEMK -->

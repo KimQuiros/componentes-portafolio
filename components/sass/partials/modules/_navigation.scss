@@ -11,8 +11,8 @@
 /* #Container of navigation
  *-------------------------------------------------------*/
 .container-nav{
-	@include span-columns(2);
-	border-right:1px solid $pink;
+	@include span-columns(3);
+	background: $pink;
   height: 100%;
   text-align: center;
 }
@@ -34,7 +34,7 @@
 
   h1{
   	opacity: 1;
-    color: $pink;
+    color: #fff;
     font-weight: 400;
     display: inline-block;
     letter-spacing: 10px;
@@ -61,13 +61,9 @@
 	a{
 		@include font-size(18);
 		font-family: $title;
-		color:#000;
+		color:#fff;
 		display: block;
 		margin-bottom: 20px;
-
-		&:hover{
-			color: $pink;
-		}
 	}
 }
 

@@ -1,0 +1,27 @@
+/* ==|====================
+   Partials/Modules/Blog
+   -------INDEX--------
+   #Container of Blog
+   ======================= */
+
+/* #Container of Blog home
+ *-------------------------------------------------------*/
+.blog{
+	position: relative;
+	width: 100%;
+	transform: skew(0deg, -2deg);
+}
+
+.content-text-blog{
+	position: absolute;
+	margin-top: 118px;
+	text-align: center;
+	width: 94%;
+	transform: skew(0deg, 2deg);
+
+	p{
+		@include font-size(16);
+		color: $white;
+		font-family: $body;
+	}
+}

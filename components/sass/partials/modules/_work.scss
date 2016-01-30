@@ -1,0 +1,54 @@
+/* ==|====================
+   Partials/Modules/Work
+   -------INDEX--------
+   #container work home
+   ======================= */
+
+/* #container work home
+ *-------------------------------------------------------*/
+.content-work {
+	display: inline-block;
+	vertical-align: top;
+	width: 32%;
+	margin-right: 21px;
+	margin-top: 20px;
+	position: relative;
+
+	&:last-child{
+		margin-right: 0;
+	}
+
+	&:hover{
+		.content-work-text{
+			display: block;
+		}
+	}
+}
+
+.content-work-img {
+	width: 100%;
+
+	img {
+		width: inherit;
+		height: 300px;
+	}
+}
+
+.content-work-text {
+	position: absolute;
+  top: 18px;
+  text-align: center;
+ 	left: 19px;
+  background: rgba(0,0,0,0.5);
+  padding: 87px 66px;
+  display: none;
+
+  a{
+  	@include font-size(14);
+  	color: $white;
+  }
+}
+
+.content-work-title {
+	color: $white;
+}

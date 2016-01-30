@@ -2,11 +2,12 @@
    Partials/Modules/Blog
    -------INDEX--------
    #Container of Blog
+   #Page Blog
    ======================= */
 
 /* #Container of Blog home
  *-------------------------------------------------------*/
-.blog{
+.blog-home{
 	position: relative;
 	width: 100%;
 	transform: skew(0deg, -2deg);
@@ -24,4 +25,74 @@
 		color: $white;
 		font-family: $body;
 	}
+}
+
+/* #Page Blog
+ *-------------------------------------------------------*/
+.content-blog{
+	display: inline-block;
+	width: 30%;
+	margin-bottom: 50px;
+	vertical-align: top;
+	margin-right: 57px;
+
+	&:nth-child(3n+3){
+		margin-right: 0;
+	}
+}
+
+.title-blog {
+	margin-bottom: 0;
+}
+
+.blog-date{
+	margin: 10px 0;
+}
+
+.content-blog-img {
+	width: 100%;
+
+	img{
+		width: 100%;
+	}
+}
+
+.content-blog-info{
+	margin-top:10px;
+
+	p{
+		margin-bottom: 10px;
+	}
+
+	button {
+		@include button($green, $green, $white);
+	}
+}
+
+.content-blog-video{
+	width: 100%;
+	height: 239px;
+
+	iframe {
+		width: 100%;
+		height: 239px;
+	}
+}
+
+.container-blog-preview {
+	width: 60%;
+}
+
+.content-blog-video-preview{
+	width: 100%;
+	height: 350px;
+
+	iframe{
+		width: 100%;
+		height: 350px;
+	}
+}
+
+.content-intro-preview {
+	margin-top: 20px;
 }

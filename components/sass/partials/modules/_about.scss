@@ -1,11 +1,11 @@
 /* ==|====================
    Partials/Modules/about
    -------INDEX--------
-   #Container of about
+   #title
    #text
    ======================= */
 
-/* #Container of about
+/* #title
  *-------------------------------------------------------*/
 .content-title{
 	text-align: center;
@@ -13,9 +13,22 @@
 
 .title{
 	color: $pink;
+	margin-bottom: 20px;
 }
 
 .line{
-	@include font-size(50);
-	color: $pink;
+	border-bottom: solid 2px $pink;
+  margin: 0 auto;
+  width: 80px;
+}
+
+/* #text
+ *-------------------------------------------------------*/
+.content-text{
+	margin-top: 29px;
+
+	p{
+		width: 50%;
+    margin: 0 auto;
+	}
 }
